@@ -1,9 +1,8 @@
 ---
 type: meeting
 attendees: 
-date: <% tp.file.creation_date() %>
-date-created: <% tp.file.creation_date() %>
-date-modified: <% tp.file.last_modified_date() %>
+date: <% tp.date.now("yyyy-MM-DD") %>
+date-created: <% moment(tp.date.now()).toISOString() %>
 ---
 <% await tp.file.move("/Meetings/" + tp.file.title) %>
 
@@ -13,7 +12,7 @@ date-modified: <% tp.file.last_modified_date() %>
 
 ## Their Action Items
 
-- [ ] 
+- 
 
 ## My Action Items
 

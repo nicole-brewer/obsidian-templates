@@ -1,7 +1,6 @@
 ---
-date: <% tp.file.creation_date() %>
-date-created: <% tp.file.creation_date() %>
-date-modified: <% tp.file.last_modified_date() %>
+date: <% tp.date.now("yyyy-MM-DD") %>
+date-created: <% moment(tp.date.now()).toISOString() %>
 ---
 
 status:: blank

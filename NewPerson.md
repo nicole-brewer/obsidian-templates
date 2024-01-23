@@ -1,9 +1,14 @@
 ---
 type: person
-institutions: []
-date: <% tp.file.creation_date() %>
-date-created: <% tp.file.creation_date() %>
-date-modified: <% tp.file.last_modified_date() %>
+institutions: 
+date: <% tp.date.now("yyyy-MM-DD") %>
+date-created: <% moment(tp.date.now()).toISOString() %>
 ---
+<% await tp.file.move("/People/" + tp.file.title) %>
 
-status:: blank
+## Meetings
+
+```dataview
+TABLE date AS "Date", abstract AS "Summary"
+WHERE type = "meeting" and contains(attendees, [[<% tp.file.title %>]])
+```
