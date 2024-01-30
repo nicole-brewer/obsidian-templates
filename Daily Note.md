@@ -11,7 +11,7 @@ date-created: <% moment(tp.date.now()).toISOString() %>
 ## Meetings
 
 ```dataview
-TABLE date AS "Date", abstract AS "Summary"
+TABLE abstract AS "Summary"
 WHERE type = "meeting" AND file.day = date("<% tp.date.now("YYYY-MM-DD") %>")
 SORT file.day DESC
 ```

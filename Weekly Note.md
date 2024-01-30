@@ -8,6 +8,7 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 <% await tp.file.move("/Weekly Notes/" + tp.file.title) %>
 << [[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>]]  | [[<% tp.date.weekday("[Week of] MMM DD, YYYY",  7) %>]] >>
 
+![[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>#❗️ Things to Avoid ❗️]]
 ## Major Goals
 
 ## Weekly Adventure
@@ -68,7 +69,7 @@ WHERE type = "day" and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) 
 - What did I spend too much time on?
 - How did I prioritize my tasks, and did it work effectively?
 - What rabbit holes had me distracted this week? How bad was the time sink? 
-### Things to Avoid
+### ❗️ Things to Avoid ❗️
 
 - 
 ### Positivity and Gratitude 
