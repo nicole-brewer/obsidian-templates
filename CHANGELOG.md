@@ -1,8 +1,18 @@
 # Changelog
 
+## 2024-01-31
+
+### Added 
+
+I took a few of the files from [obsidian-templater-scripts](https://github.com/mihaiconstantin/obsidian-templater-scripts/tree/main), added a licence at the top, and put them in a `scripts` folder. Templater settings point to this directory for user functions. There are now several of my own functions as well, mostly for manipulating paths that are specified in code blocks. All templates in this repository should now be reproducible with minimal setup.
+
+### Changed
+
+Several templates, for example Meeting.md, were changed to use [obsidian-templater-scripts](https://github.com/mihaiconstantin/obsidian-templater-scripts/tree/main).
+
 ## 2024-01-30
 
-## Added 
+### Added 
 
 #### Quarto Render
 

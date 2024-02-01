@@ -26,6 +26,8 @@ title: <% config.title.value %>
 date: <% tp.date.now("yyyy-MM-DD") %>
 author: Nicole Brewer
 bibliography: <% config.filename.value %>.bib
+author: Nicole Brewer
+parent: "[[Philosophy of Science and Medicine]]"
 ---
 
 ::: {.content-hidden}
