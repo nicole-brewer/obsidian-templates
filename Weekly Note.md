@@ -9,7 +9,6 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 << [[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>]]  | [[<% tp.date.weekday("[Week of] MMM DD, YYYY",  7) %>]] >>
 
 ![[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>#❗️ Things to Avoid ❗️]]
-## Major Goals
 
 ## Weekly Adventure
 
@@ -18,6 +17,12 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 TASK
 FROM -"Templates"
 WHERE (type = "day" or type="meeting") and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) and file.day <= date(<% tp.date.weekday("YYYY-MM-DD", 6) %>)
+```
+
+## Active Experiments
+```dataview
+TABLE trial
+WHERE type = "experiment" AND active = true
 ```
 
 ## Weekly Meetings
@@ -40,10 +45,15 @@ WHERE type = "day" and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) 
 
 ![[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>#Things to Avoid]]
 
+## Task Ideas
+
+- [ ] 
+
 ## [[Sprint Review]] 
 
 - [ ] Review [Sprint Perspective](omnifocus:///perspective/kVY6xIOnrVc)
 - [ ] Answer questions below
+- [ ] Revisit active experiments
 
 - Did I accomplish all the tasks I set out to complete?
 - Which goals were met or not met?
@@ -55,11 +65,12 @@ WHERE type = "day" and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) 
 - What other challenges or roadblocks am I facing? Who could I use support from?
 - Tell me about some big and small successes this week.
 
-## Task Ideas
+### ❗️ Things to Avoid ❗️
 
-- [ ] 
+- 
 
 ## Retrospective
+
 ### Task Management 
 
 - Did I get the most important tasks completed? What important tasks did I avoid?
@@ -69,9 +80,6 @@ WHERE type = "day" and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) 
 - What did I spend too much time on?
 - How did I prioritize my tasks, and did it work effectively?
 - What rabbit holes had me distracted this week? How bad was the time sink? 
-### ❗️ Things to Avoid ❗️
-
-- 
 ### Positivity and Gratitude 
 
 - What were some successes from this week?

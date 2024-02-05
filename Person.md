@@ -30,5 +30,5 @@ date-created: <% moment(tp.date.now()).toISOString() %>
 
 ```dataview
 TABLE date AS "Date", abstract AS "Summary"
-WHERE type = "meeting" and contains(attendees, [[<% config.filename.value %>]])
+WHERE type = "meeting" and contains(attendees, [[<% config.filename.value %>]] or contains(people, [[<% config.filename.value %>]])
 ```

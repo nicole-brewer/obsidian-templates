@@ -25,7 +25,7 @@ await tp.user.makeNoteWithPrompting(tp, config)
 _%>
 ---
 type: meeting
-attendees: 
+people: 
 date: <% tp.date.now("yyyy-MM-DD") %>
 ---
 
