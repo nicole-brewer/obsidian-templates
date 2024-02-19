@@ -1,5 +1,18 @@
 # Changelog
 
+## 2024-02-19
+
+#### Added
+
+##### Email Template
+Added a template for [[Email]]s. Title includes the date to prevent duplicate files. Emails are useful for drafting cold emails or emails that serve as an expose for a new idea or collaboration. This works well with the [MailMate](https://freron.com/) email client which is designed primarily to be markdown friendly. If the email turns into a chain worth recording, it can be clicked and dragged into [DevonThink]() for archival purposes. Links back to the email chain can be obtained by right-clicking on the item and clicking "Copy Item Link".
+##### Slack Template
+
+Similarly to the Email template, the title includes the name of the recipient and the date to avoid duplicate filenames. Conversations in Slack can be easily highlighted and then copy and pasted into a markdown file. The format is pretty and contains timestamps and links back to the original message. The benefit of storing Slack conversations in Obsidian is that the text will remain available, even if the Slack workspace or messages are deleted or messages become available after 90 days on the free version. 
+#### Changed
+
+Made minor changes to existing templates like using config variables to add metadata to frontmatter. 
+
 ## 2024-01-31
 
 ### Added 
