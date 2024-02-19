@@ -13,11 +13,20 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 ## Weekly Adventure
 
 ## Tasks
+- [ ] 
 ```dataview
 TASK
 FROM -"Templates"
 WHERE (type = "day" or type="meeting") and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) and file.day <= date(<% tp.date.weekday("YYYY-MM-DD", 6) %>)
 ```
+
+## Notes
+```dataview
+LIST
+FROM -"Templates"
+WHERE file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) AND file.day <= date(<% tp.date.weekday("YYYY-MM-DD", 6) %>)
+```
+
 
 ## Active Experiments
 ```dataview
@@ -25,35 +34,20 @@ TABLE trial
 WHERE type = "experiment" AND active = true
 ```
 
-## Weekly Meetings
-```dataview
-LIST
-FROM -"Templates"
-WHERE type = "meeting" AND file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) AND file.day <= date(<% tp.date.weekday("YYYY-MM-DD", 6) %>)
-```
-
-## Daily Notes
-```dataview
-LIST
-FROM -"Templates"
-WHERE type = "day" and file.day >= date(<% tp.date.weekday("YYYY-MM-DD", 0) %>) and file.day <= date(<% tp.date.weekday("YYYY-MM-DD", 6) %>)
-```
-
 ## Planning
 
 ![[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>#Task Ideas]]
 
-![[<% tp.date.weekday("[Week of] MMM DD, YYYY",  -7) %>#Things to Avoid]]
-
-## Task Ideas
-
-- [ ] 
 
 ## [[Sprint Review]] 
 
 - [ ] Review [Sprint Perspective](omnifocus:///perspective/kVY6xIOnrVc)
 - [ ] Answer questions below
 - [ ] Revisit active experiments
+
+## Task Ideas
+
+- [ ] 
 
 - Did I accomplish all the tasks I set out to complete?
 - Which goals were met or not met?

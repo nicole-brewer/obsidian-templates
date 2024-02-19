@@ -8,7 +8,7 @@ let config = {
     filename: {
 	    prompt: true,
 	    display: "Full name with spaces:",
-	    value: "New Person"
+	    value: ""
     },
     title: {
         prompt: false,
@@ -23,12 +23,12 @@ _%>
 type: person
 institutions: 
 date: <% tp.date.now("yyyy-MM-DD") %>
-date-created: <% moment(tp.date.now()).toISOString() %>
 ---
 
-## Meetings
+## All Mentions
 
 ```dataview
-TABLE date AS "Date", abstract AS "Summary"
-WHERE type = "meeting" and contains(attendees, [[<% config.filename.value %>]] or contains(people, [[<% config.filename.value %>]])
+TABLE date AS "Date",  abstract AS "Summary"
+WHERE contains(file.outlinks, [[<% config.filename.value %>]])
+SORT type
 ```

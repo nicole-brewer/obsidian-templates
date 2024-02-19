@@ -8,7 +8,7 @@ let config = {
     who: {
 	    prompt: true,
 	    display: "Who is the meeting with?",
-	    value: "Meeting with "
+	    value: ""
     },
 	date: {
 		 prompt: true,
@@ -17,7 +17,7 @@ let config = {
 	},
     filename: {
         prompt: false,
-        value: "{{ who }} - {{ date }}"
+        value: "Meeting with {{ who }} - {{ date }}"
     },
 }
 
@@ -25,7 +25,8 @@ await tp.user.makeNoteWithPrompting(tp, config)
 _%>
 ---
 type: meeting
-people: 
+people:
+  - "[[<% config.who.value %>]]"
 date: <% tp.date.now("yyyy-MM-DD") %>
 ---
 
@@ -44,4 +45,4 @@ date: <% tp.date.now("yyyy-MM-DD") %>
 
 ## Summary
 
-abstract:: blank
+summary:: blank

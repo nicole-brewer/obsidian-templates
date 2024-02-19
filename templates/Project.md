@@ -22,3 +22,7 @@ date: <% tp.date.now("yyyy-MM-DD") %>
 links: 
 ---
 
+```dataview
+TABLE summary
+FROM [[<% config.filename.value %>]]
+```
