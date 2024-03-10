@@ -10,16 +10,20 @@ let config = {
 		display: "Where to store the file",
 		value: "Courses/Philosophy of Biology and Medicine"
     },
-    filename: {
-	    prompt: true,
-	    display: "What should the filename be?",
-	    value: "{{ title }}"
-    },
     title: {
+	    prompt: true,
+	    display: "What is the title of the assignment?",
+	    value: ""
+    },
+    date: {
         prompt: true,
-        display: "How would you like the title to appear in the document?",
+        display: "When is the assignment due?",
         value: ""
     },
+    filename: {
+	    prompt: false,
+	    value: "{{title}} - {{date}}"
+	},
 }
 
 await tp.user.makeNoteWithPrompting(tp, config)
