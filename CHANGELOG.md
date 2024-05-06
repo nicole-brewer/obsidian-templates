@@ -1,5 +1,16 @@
 # Changelog
 
+## 2024-05-05
+
+### Added 
+#### Resource Templates - Presentations and Publications
+Templates prepended with "Resources - " are *theirs* in the sense that they are not authored by me. 
+
+## 2024-03-27
+### Added
+#### Revealjs and PowerPoint Presentation Template
+[Presentations](https://quarto.org/docs/presentations/) are rendered with Quarto. [Revealjs](https://quarto.org/docs/presentations/revealjs/) is feature rich and the recommended "unless you have Office requirements". Complex diagrams spanning multiple slides are often a requirement for me, which is why I have the option for powerpoint. The workflow I anticipate is to draft an outline in Obsidian, render it to pptx, and then stay in PowerPoint or Google Slides or Canva without ever returning to the draft outline. It is important that I save a copy of the pptx file so that I don't accidentally overwrite any changes made. In this case, the word "Draft" should probably be included in the title. As such, the default file path for PowerPoint presentations is `Presentations/{{title}} Draft - {{date}}` whereas the Revealjs is completely programmatic and does not contain the word "draft". However, that the filename `{{title}} - {{date}}` could easily conflict with journal entries that have the same title.
+
 ## 2024-03-10
 #### Added 
 ##### Sprint Review Template
